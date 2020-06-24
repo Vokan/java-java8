@@ -19,13 +19,11 @@ public class Method_01_Test {
         List<Person> findAll();
         default int sumAge() {
         	int nvAge = 0;
-        	List<Person> personne;
         	
-        	for(Person age : personne) {
-        		int nvAge += age;
-        		return nvAge;
+        	for(Person age : findAll()) {	
+        	
         	}
-        	
+        	return findfAll().size();
         }
         // TODO créer une méthode int sumAge()
         // TODO Cette méthode retourne le résultat de l'addition des ages des personnes

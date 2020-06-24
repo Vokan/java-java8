@@ -15,7 +15,12 @@ public class Method_02_Test {
     // tag::IDao[]
     interface IDao {
         List<Person> findAll();
-
+        default String format() {
+        	for (Person personne: findAll()) {
+  
+        	}
+        	return "[" + findAll().size() + "]";
+        }
         // TODO créer une méthode String format()
         // TODO la méthode retourne une chaîne de la forme [<nb_personnes> persons]
         // TODO exemple de résultat : "[14 persons]", "[30 persons]"
