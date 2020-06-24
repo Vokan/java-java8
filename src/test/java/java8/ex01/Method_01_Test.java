@@ -1,5 +1,6 @@
 package java8.ex01;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
@@ -16,7 +17,16 @@ public class Method_01_Test {
     // tag::IDao[]
     interface IDao {
         List<Person> findAll();
-
+        default int sumAge() {
+        	int nvAge = 0;
+        	List<Person> personne;
+        	
+        	for(Person age : personne) {
+        		int nvAge += age;
+        		return nvAge;
+        	}
+        	
+        }
         // TODO créer une méthode int sumAge()
         // TODO Cette méthode retourne le résultat de l'addition des ages des personnes
     }
