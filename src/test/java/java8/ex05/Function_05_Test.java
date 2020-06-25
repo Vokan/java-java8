@@ -19,18 +19,16 @@ public class Function_05_Test {
     // TODO compléter la fonction
     // TODO modifier le mot de passe en "secret"
     Consumer<Person> changePasswordToSecret = person ->{
-    	Person newPerson = new Person();
-    		newPerson.setPassword("secret");
+    	
+    		person.setPassword("secret");
     };
 
     // TODO compléter la fonction
     // TODO vérifier que l'age > 4 avec une assertion JUnit
     Consumer<Person> verifyAge = person ->{
     	
-    	Person newPerson = new Person();
-    	newPerson.setAge(5);
-    	int age = newPerson.getAge();
-    	assertTrue(age>5);
+    	
+    	assert person.getAge()>4;
     };
 
     // TODO compléter la fonction
