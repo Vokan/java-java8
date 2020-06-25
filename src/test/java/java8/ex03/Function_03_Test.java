@@ -20,7 +20,7 @@ public class Function_03_Test {
     	
     	Person child = new Person();
     		child.setAge(0);
-    		child.setFirstname("<John><Aline");
+    		child.setFirstname("John Aline");
     		child.setLastname("France");
     		child.setPassword(null);
     	
