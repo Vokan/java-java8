@@ -40,7 +40,7 @@ public class Stream_03_Test {
         List<Order> orders = new Data().getOrders();
 
         // TODO construire une Map <Client, Commandes effectuées par le client
-        Map<Customer, List<Order>> result = null;
+        Map<Customer, List<Order>> result = orders.stream().collect(Collectors.groupingBy(Costumer::));
 
         assertThat(result.size(), is(2));
         assertThat(result.get(new Customer(1)), hasSize(4));
