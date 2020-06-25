@@ -4,6 +4,9 @@ import java8.data.Data;
 import java8.data.Person;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 import java.util.List;
 import java.util.function.Consumer;
 
@@ -15,15 +18,30 @@ public class Function_05_Test {
     //tag::functions[]
     // TODO compléter la fonction
     // TODO modifier le mot de passe en "secret"
-    Consumer<Person> changePasswordToSecret = null;
+    Consumer<Person> changePasswordToSecret = person ->{
+    	Person newPerson = new Person();
+    		newPerson.setPassword("secret");
+    };
 
     // TODO compléter la fonction
     // TODO vérifier que l'age > 4 avec une assertion JUnit
-    Consumer<Person> verifyAge = null;
+    Consumer<Person> verifyAge = person ->{
+    	
+    	Person newPerson = new Person();
+    	newPerson.setAge(5);
+    	int age = newPerson.getAge();
+    	assertTrue(age>5);
+    };
 
     // TODO compléter la fonction
     // TODO vérifier que le mot de passe est "secret" avec une assertion JUnit
-    Consumer<Person> verifyPassword = null;
+    Consumer<Person> verifyPassword = person ->{
+    	
+    	Person newPass = new Person();
+    	newPass.setPassword("secret");
+    	String pass = newPass.getPassword();
+    	assertEquals("secret",pass);
+    };
     //end::functions[]
 
 
