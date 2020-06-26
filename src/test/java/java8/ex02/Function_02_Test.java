@@ -4,6 +4,7 @@ import java8.data.Account;
 import java8.data.Person;
 import org.junit.Test;
 
+import java.security.acl.Owner;
 import java.util.function.BiFunction;
 
 /**
@@ -29,7 +30,7 @@ public class Function_02_Test {
     public void test_build_account() throws Exception {
 
         // TODO invoquer la fonction buildAccount pour que le test soit passant
-        Account account = buildAccount.apply(person, 500);
+        Account account = buildAccount.apply(person,500);
 
         assert account.getBalance().equals(500);
         assert account.getOwner().getFirstname().equals("John");
