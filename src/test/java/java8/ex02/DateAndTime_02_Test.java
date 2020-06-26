@@ -24,15 +24,15 @@ public class DateAndTime_02_Test {
         LocalDate result = LocalDate.of(2050, 12, 24);
 
         // TODO valoriser les différentes variables afin de rendre le test passant
-        int year =0;
-        Month month = null;
-        int dayOfMonth = 0;
-        DayOfWeek dayOfWeek = null;
-        int dayOfYear = 0;
-        result.getYear();
-        result.getMonth();
-        result.getDayOfMonth();
-        result.getDayOfWeek();
+        int year =result.getYear();;
+        Month month = result.getMonth();;
+        int dayOfMonth = result.getDayOfMonth();;
+        DayOfWeek dayOfWeek = result.getDayOfWeek();;
+        int dayOfYear = result.getDayOfYear();;
+        
+        
+        
+        
         result.getDayOfYear();
         
         assertThat(year, is(2050));
@@ -51,12 +51,12 @@ public class DateAndTime_02_Test {
 
 
         // TODO valoriser les différentes variables afin de rendre le test passant
-        int year = 0;
-        Month month = null;
-        int dayOfMonth = 0;
-        result.getYear();
-        result.getMonth();
-        result.getDayOfMonth();
+        int year = result.getYear();
+        Month month = result.getMonth();;
+        int dayOfMonth = result.getDayOfMonth();;
+        
+        
+        
 
         assertThat(year, is(1990));
         assertThat(month, is(Month.JANUARY));
